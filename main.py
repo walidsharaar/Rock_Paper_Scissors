@@ -1,16 +1,46 @@
-# This is a sample Python script.
+# Project start
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print("Welcome to Rock Paper Scissor Game ! \n")
 
+user_selection = int(input("Choose 1 for Rock, 2 for Paper or 3 for Scissors:\n"))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# variable defination
 
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+game_emojis=[rock,paper,scissors]
+
+computer_selection= random.randint(1,3)
+
+if user_selection ==0 and computer_selection=2:
+    print("You win!")
+elif computer_selection>user_selection:
+    print("You Lose!")
+else:
+    ("Invalid Input, You Lose!")
